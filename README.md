@@ -43,6 +43,8 @@ $view->inc('elements/header.php', array('bodyClass' => 'ccm-dashboard-desktop'))
 <ccm-page-selector v-model="cID"></ccm-page-selector>
 <label>User</label>
 <ccm-user-selector v-model="uID"></ccm-user-selector>
+<label>Content</label>
+<ccm-editor v-model="content"></ccm-editor>
 </div>
 
 </div>
@@ -58,7 +60,8 @@ var vm = new Vue({
     data: {
         fID: 0,
         cID: 0,
-        uID: 0
+        uID: 0,
+        content: '<p>I love concrete5</p>'
     }
 });
 </script>
