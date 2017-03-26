@@ -30,7 +30,7 @@ class Controller extends \Concrete\Core\Package\Package
     public function on_start()
     {
         $al = AssetList::getInstance();
-        $al->register('javascript', 'vue', 'js/vue.js', array(), 'vuetools');
+        $al->register('javascript', 'vue', 'js/vue.min.js', array(), 'vuetools');
         $al->register('javascript', 'vue-ccm-file-selector', 'js/vue-ccm-file-selector.js', array(), 'vuetools');
         $al->register('javascript', 'vue-ccm-page-selector', 'js/vue-ccm-page-selector.js', array(), 'vuetools');
         $al->register('javascript', 'vue-ccm-user-selector', 'js/vue-ccm-user-selector.js', array(), 'vuetools');
