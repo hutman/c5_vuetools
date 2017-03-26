@@ -34,12 +34,20 @@ class Controller extends \Concrete\Core\Package\Package
         $al->register('javascript', 'vue-ccm-file-selector', 'js/vue-ccm-file-selector.js', array(), 'vuetools');
         $al->register('javascript', 'vue-ccm-page-selector', 'js/vue-ccm-page-selector.js', array(), 'vuetools');
         $al->register('javascript', 'vue-ccm-user-selector', 'js/vue-ccm-user-selector.js', array(), 'vuetools');
+        $al->register('javascript', 'vue-ccm-editor', 'js/vue-ccm-editor.js', array(), 'vuetools');
 
         $al->registerGroup('vuetools', array(
             array('javascript', 'vue'),
             array('javascript', 'vue-ccm-file-selector'),
             array('javascript', 'vue-ccm-page-selector'),
             array('javascript', 'vue-ccm-user-selector'),
+            array('javascript', 'vue-ccm-editor'),
+
         ));
+
+        $editor = \Core::make('editor');
+        $js = "<script>var vue_editor = " . $editor->getEditorInitJSFunction() . "</script>";
+        $v = \View::getRequestInstance();
+        $v->addHeaderItem($js);
     }
 }
