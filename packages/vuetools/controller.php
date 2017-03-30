@@ -8,7 +8,7 @@ use Concrete\Core\Asset\AssetList;
 class Controller extends \Concrete\Core\Package\Package
 {
     protected $pkgHandle = 'vuetools';
-    protected $appVersionRequired = '5.8.1';
+    protected $appVersionRequired = '8.1';
     protected $pkgVersion = '0.0.2';
 
     public function getPackageDescription()
